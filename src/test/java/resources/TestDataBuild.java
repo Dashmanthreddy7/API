@@ -3,36 +3,20 @@ package resources;
 import java.util.ArrayList;
 import java.util.List;
 
-import pojo.AddPlace;
-import pojo.Location;
+import pojo.AddUser;
 
 public class TestDataBuild {
 
 	
 	
-	public AddPlace addPlacePayLoad(String name, String language, String address)
+	public AddUser addUserDetails(String name, String job)
 	{
-		AddPlace p =new AddPlace();
-		p.setAccuracy(50);
-		p.setAddress(address);
-		p.setLanguage(language);
-		p.setPhone_number("(+91) 983 893 3937");
-		p.setWebsite("https://rahulshettyacademy.com");
-		p.setName(name);
-		List<String> myList =new ArrayList<String>();
-		myList.add("shoe park");
-		myList.add("shop");
+		AddUser au = new AddUser();
+		au.setName(name);
+		au.setJob(job);
 
-		p.setTypes(myList);
-		Location l =new Location();
-		l.setLat(-38.383494);
-		l.setLng(33.427362);
-		p.setLocation(l);
-		return p;
+		return au;
 	}
 	
-	public String deletePlacePayload(String placeId)
-	{
-		return "{\r\n    \"place_id\":\""+placeId+"\"\r\n}";
-	}
+
 }
